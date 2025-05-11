@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Open+Sans:ital,wdth,wght@1,87.5,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    color: whitesmoke;
+}
+
+body {
+    background-image: url(../img/fondoproyectos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Menú de navegación */
+header {
+    width: 100%;
+    background-color: rgb(192, 97, 230);
+    padding: 2vh 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgb(137, 66, 188);
+    border-radius: 0.5rem;
+}
+
+.drawer {
+    display: none;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+#ckbox {
+    display: none;
+}
+
+/* Título principal */
+.titulo {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+/* Secciones de contenido */
+.contenido {
+    background-color: rgba(10, 10, 10, 0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;
+    width: 50%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenido img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+/* Footer copyright */
+.copyright {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Redes sociales */
+.redesSociales {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.redesSociales li a {
+    color: #fff;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.redesSociales li a:hover {
+    color: rgb(45, 3, 74);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .drawer {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgb(192, 97, 230);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        transition: left 0.3s;
+        z-index: 999;
+    }
+
+    #ckbox:checked~.navbar {
+        left: 0;
+    }
+
+    .navbar li {
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .contenido {
+        width: 90%;
+    }
+
+    .titulo h1 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+}

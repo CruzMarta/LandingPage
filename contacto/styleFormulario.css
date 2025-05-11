@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Open+Sans:ital,wdth,wght@1,87.5,300..800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-image: url(../img/pexels-federico-orlandi-1423142-3260626.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(192, 97, 230);
+  font-family: "Lora", serif;
+  text-transform: uppercase;
+  padding: 2vh 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 1vh 2vw;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(109, 11, 148, 0.808);
+  border-radius: 0.5vw;
+}
+
+.drawer {
+  color: white;
+  float: left;
+  cursor: pointer;
+  display: none;
+  border: solid 0.1rem white;
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+}
+
+#ckbox {
+  display: none;
+}
+
+.formulario {
+  background-color: rgba(192, 97, 230, 0.808);
+  color: white;
+  font-family: "Lora", serif;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px black;
+  width: 50%;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 1px solid rgba(150, 145, 145);
+  border-radius: 4px;
+  background-color: rgba(7, 7, 7, 0.80);
+  color: whitesmoke;
+  font-size: large;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: rgba(109, 11, 148, 0.808);
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #00000058;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  padding: 0 100px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.copyright p {
+  color: #fff;
+}
+
+.redesSociales {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px 30px;
+  list-style: none;
+}
+
+.redesSociales li {
+  padding: 10px;
+  color: #fff;
+  font-size: 2.5em;
+}
+
+@media(max-width: 1020px) {
+  .drawer {
+    display: block;
+  }
+
+  .formulario {
+    margin: 2rem;
+    width: 90%;
+  }
+
+  ul.navbar {
+    position: fixed;
+    width: 60%;
+    height: 80vh;
+    background-color: lightblue;
+    top: 10vh;
+    left: -150%;
+    flex-direction: column;
+    align-content: stretch;
+    transition: all 0.5s;
+    padding-left: 1rem;
+  }
+
+  header ul li {
+    padding: 1rem 0;
+    border-bottom: solid 0.1rem rgba(201, 196, 196, 0.4);
+  }
+
+  #ckbox:checked~.navbar {
+    left: 0;
+  }
+
+  .redesSociales {
+    padding-right: 1rem;
+  }
+
+  .copyright {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400..700&family=Open+Sans:ital,wdth,wght@1,87.5,300..800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background: rgb(109, 11, 148);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* Menú principal */
+.divmenu {
+  width: 100%;
+  background-color: rgb(192, 97, 230);
+  padding: 2vh 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(109, 11, 148, 0.8);
+  border-radius: 0.5rem;
+}
+
+/* Menú hamburguesa */
+.drawer {
+  display: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#ckbox {
+  display: none;
+}
+
+/* Estructura principal */
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.curriculum {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+aside {
+  background-color: rgb(192, 97, 230);
+  width: 35%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+aside img.yo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.contacto {
+  list-style: none;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.contacto li {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.tituloInfo {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+}
+
+.idiomas {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-right: 1rem;
+}
+
+.idiomas ul {
+  list-style: none;
+}
+
+.idiomas li {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.info p {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Contenido principal */
+.contenido {
+  width: 65%;
+  padding: 2rem;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.formacion {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.titulo2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+.experiencia {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.experiencia ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.experiencia li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1020px) {
+
+  main,
+  .curriculum {
+    flex-direction: column;
+  }
+
+  aside,
+  .contenido {
+    width: 100%;
+  }
+
+  .drawer {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 70%;
+    background-color: rgba(192, 97, 230, 0.95);
+    height: 100vh;
+    padding-top: 2rem;
+    transition: left 0.3s;
+  }
+
+  #ckbox:checked~.menu .navbar {
+    left: 0;
+  }
+
+  .navbar li {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .formacion,
+  .titulo2,
+  .subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .experiencia,
+  .info p {
+    font-size: 0.9rem;
+  }
+}
